@@ -4,7 +4,7 @@ import { Provider } from 'react-wrap-balancer'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider defaultTheme="system" attribute="class">
+    <ThemeProvider defaultTheme="light" attribute="class">
       <Provider>
         <Component {...pageProps} />
       </Provider>

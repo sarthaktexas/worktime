@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --send-bg: #0b93f6;
+  --send-color: white;
+  --receive-bg: #e5e5ea;
+  --receive-text: black;
+  --page-background: white;
+}
+
 html.dark {
     color: #ffffff;
     background-color: #000000;
@@ -16,3 +24,39 @@ html.dark {
 
 /* Fixes outline style for inputs on Safari */
 input:focus { outline: none; }
+
+.receive {
+  background: var(--receive-bg);
+  color: black;
+  align-self: flex-start;
+}
+.receive:before {
+  left: -7px;
+  width: 20px;
+  background-color: var(--receive-bg);
+  border-bottom-right-radius: 16px 14px;
+}
+.receive:after {
+  left: -26px;
+  width: 26px;
+  background-color: var(--page-background);
+  border-bottom-right-radius: 10px;
+}
+
+p {
+  max-width: 75%;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+p:before,
+p:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+}
