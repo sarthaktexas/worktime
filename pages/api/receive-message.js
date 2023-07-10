@@ -30,7 +30,7 @@ export default async (req, res) => {
     } else {
         sendMessage(req.body.From, "why did you not attach a photo?? we want a photo!!!")
     }
-    res.status(200);
+    res.status(200).json("sent message");
 }
 
 function sendMessage(from, body) {
